@@ -1,0 +1,121 @@
+# features/US01_RastreoGPS.feature
+
+Feature: Rastreo GPS
+
+  Scenario: Ver la ubicación actual en el mapa
+    Given estoy en la aplicación Safe People
+    When activo el rastreo GPS
+    Then puedo ver mi ubicación actual en el mapa
+
+  Scenario: Actualizar la ubicación en el mapa automáticamente
+    Given soy un usuario que ha activado el rastreo GPS
+    When me muevo a una nueva ubicación
+    Then la aplicación actualiza automáticamente mi ubicación en el mapa
+
+# features/US03_Boton.feature
+
+Feature: Botón de Alarma de Emergencia
+  Como usuario, quiero tener un botón de alarma para usar en situaciones de emergencia.
+
+  Scenario: Alerta a los Servicios de Emergencia
+    Given que estoy en una situación de emergencia
+    When presiono el botón de alarma en la aplicación Safe People
+    Then se envía una señal de alerta a los servicios de emergencia con mi ubicación actual
+
+  Scenario: Alerta a Contactos de Emergencia
+    Given que estoy en una situación de emergencia
+    When presiono el botón de alarma en la aplicación Safe People
+    Then la aplicación también envía una señal de alerta a mis contactos de emergencia con mi ubicación actual
+
+
+
+
+# features/US06_interface.feature
+
+Feature: Interfaz Intuitiva
+  Como usuario, quiero que la aplicación sea fácil de usar para poder acceder rápidamente a sus funciones.
+
+  Scenario: Navegación Intuitiva
+    Given que estoy utilizando la aplicación Safe People
+    When navego por sus funciones
+    Then encuentro que su interfaz es intuitiva y fácil de usar
+
+  Scenario: Acceso a Tutorial o Guía de Usuario
+    Given que estoy utilizando la aplicación Safe People
+    When encuentro una función o configuración que no entiendo
+    Then puedo acceder a un tutorial o guía de usuario dentro de la aplicación para ayudarme
+
+# features/US12_panic_button.feature
+
+Feature: Acceso Rápido al Botón de Pánico
+  Como usuario, quiero ver en la pantalla principal un botón de pánico para poder activarlo de forma rápida y sencilla.
+
+  Scenario: Acceso Rápido al Botón de Pánico en Pantalla Principal
+    Given que soy un usuario de la aplicación
+    When estoy en una situación de emergencia
+    Then quiero poder acceder rápidamente a un botón de pánico en la pantalla principal para activarlo con un solo toque
+
+  Scenario: Activar el Botón de Pánico con el Teléfono Bloqueado
+    Given que soy un usuario de la aplicación
+    When estoy en una situación de emergencia
+    Then quiero poder activar el botón de pánico incluso si mi teléfono está bloqueado
+
+# features/US22security_alerts.feature
+
+Feature: Alertas de Seguridad en Tiempo Real
+  Como usuario, quiero recibir alertas de seguridad en tiempo real basadas en mi ubicación y eventos locales.
+
+  Scenario: Recibir Alerta de Seguridad en Tiempo Real
+    Given que estoy en la aplicación Safe People
+    When hay una situación de seguridad en mi área
+    Then recibo una alerta de seguridad en tiempo real en mi dispositivo
+
+  Scenario: Elegir el Tipo de Alertas de Seguridad
+    Given que estoy en la aplicación Safe People
+    When hay una situación de seguridad en mi área
+    Then puedo elegir recibir alertas de seguridad en tiempo real solo para ciertos tipos de eventos
+
+# features/us24_crime_activity_updates.feature
+
+Feature: Actualizaciones de Actividad Delictiva
+  Como usuario, quiero recibir actualizaciones sobre la actividad delictiva en mi área para estar informado y tomar precauciones.
+
+  Scenario: Recibir Actualización de Actividad Delictiva
+    Given que estoy en la aplicación Safe People
+    When hay una actividad delictiva reportada en mi área
+    Then recibo una actualización en mi dispositivo
+
+  Scenario: Elegir el Tipo de Actualizaciones de Actividad Delictiva
+    Given que estoy en la aplicación Safe People
+    When hay una actividad delictiva reportada en mi área
+    Then puedo elegir recibir actualizaciones solo para ciertos tipos de actividad delictiva
+
+# features/US28_nighttime_tracking.feature
+
+Feature: Rastreo en Eventos Nocturnos
+  Como usuario, quiero programar el rastreo automático durante eventos nocturnos para garantizar mi seguridad durante estas horas.
+
+  Scenario: Programar Rastreo Automático Durante Eventos Nocturnos
+    Given que estoy en la aplicación Safe People
+    When programo el rastreo automático durante eventos nocturnos
+    Then la aplicación rastrea y registra mi ubicación durante eventos nocturnos
+
+  Scenario: Elegir los Días de la Semana para el Rastreo Automático
+    Given que estoy en la aplicación Safe People
+    When programo el rastreo automático durante eventos nocturnos
+    Then puedo elegir los días de la semana en los que se activa el rastreo automático
+
+# features/US33_preferences_configuration.feature
+
+Feature: Configuración de Preferencias
+  Como usuario, quiero poder configurar mis preferencias en la aplicación para que se adapte mejor a mis necesidades.
+
+  Scenario: Cambiar Preferencias en la Configuración
+    Given que estoy en la aplicación Safe People
+    When cambio mis preferencias en la configuración
+    Then la aplicación se adapta a mis nuevas preferencias
+
+  Scenario: Guardar Preferencias para Sesiones Futuras
+    Given que estoy en la aplicación Safe People
+    When cambio mis preferencias en la configuración
+    Then puedo elegir guardar mis preferencias para futuras sesiones o solo para la sesión actual
